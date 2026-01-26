@@ -1,37 +1,60 @@
-CREATE TABLE Students (
-    student_id INT,
-    name VARCHAR(50),
-    city VARCHAR(50),
-    percentage DECIMAL(5,2)
+-- Create table using DDL command.
+create table customer_orders(
+order_id serial primary key,
+customer_name varchar(20),
+product varchar(20),
+quantity int,
+price numeric(10,2),
+order_date date
 );
-INSERT INTO Students VALUES
-(1, 'Amit', 'Delhi', 96.5),
-(2, 'Riya', 'Mumbai', 94.2),
-(3, 'Rahul', 'Delhi', 97.8),
-(4, 'Sneha', 'Mumbai', 98.1),
-(5, 'Ankit', 'Chandigarh', 95.6),
-(6, 'Pooja', 'Delhi', 93.4),
-(7, 'Karan', 'Chandigarh', 96.2);
 
+-- Insert records into the table.
+insert into customer_orders(customer_name,product,quantity,price,order_date) values
+('Aman',  'Laptop', 1, 55000.00, '2025-01-10'),
+('Rohit', 'Mobile', 2, 20000.00, '2025-01-11'),
+('Neha',  'Tablet',1, 30000.00, '2025-01-12'),
+('Priya', 'Laptop',1, 56000.00, '2025-01-13'),
+('Rahul', 'Mobile', 3, 18000.00, '2025-01-14'),
+('Kiran', 'Headphone',2, 3000.00, '2025-01-15'),
+('Suman', 'Keyboard', 1,1500.00, '2025-01-16'),
+('Ankit', 'Mouse',  2,800.00, '2025-01-17'); 
 
---count
---without case statement 
-SELECT CITY , COUNT(*) AS STUDET_COUNT FROM Students 
-WHERE percentage> 95
-GROUP BY city;
+-- Display all records.
+select * from customer_orders;
 
+-- Filtering Data Using WHERE clause.
+select order_id, customer_name, product, quantity, price
+from customer_orders
+where price > 20000;
 
+-- Sorting Query Results
+-- Ascending Order
+select order_id, customer_name, product, quantity, price
+from customer_orders
+where price > 20000
+order by price;
 
---with case statement
-SELECT CITY, SUM(CASE WHEN percentage> 95 THEN 1
-ELSE 0 END) AS STUDENT_COUNTS  FROM Students 
-GROUP BY city
+-- Descending Order
+select order_id, customer_name, product, quantity, price
+from customer_orders
+where price > 20000
+order by price desc;
 
+-- Grouping Data for Aggregation.
+select product, count(*) as total_product_sale
+from customer_orders
+group by product;
 
---average
---without case statement
-SELECT city, AVG(percentage) AS students_avg FROM Students WHERE percentage>95 GROUP
-BY city ORDER BY students_avg DESC;
---with case statement
-SELECT city, AVG(CASE WHEN percentage>95 THEN percentage ELSE NULL END) AS
-students_avg FROM Students GROUP BY city ORDER BY students_avg DESC;
+-- Applying conditions on aggregated data (HAVING).
+select product,
+sum(quantity*price) as total_revenue
+from customer_orders
+group by product
+having sum(quantity*price) > 50000;
+
+-- Using WHERE and HAVING together.
+select product, sum(quantity*price) as total_revenue
+from customer_orders
+where order_date >= '2025-01-01'
+group by product
+having sum(quantity*price) > 50000;
