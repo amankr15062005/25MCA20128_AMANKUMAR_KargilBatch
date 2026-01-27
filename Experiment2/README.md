@@ -1,5 +1,3 @@
-# 📘 SQL SELECT Queries using PostgreSQL
-
 ## 👤 Student Details
 
 * **Name:** Aman Kumar
@@ -151,11 +149,31 @@ HAVING SUM(quantity * price) > 50000;
 * SQL queries using WHERE, ORDER BY, GROUP BY, HAVING
 
 ### Output
+* Display all records
+  
+  <img width="882" height="304" alt="Display all Record" src="https://github.com/user-attachments/assets/a27e9a37-c935-48ae-a041-cb61d254942e" />
 
 * Filtered customer records
+  
+  <img width="778" height="152" alt="Filtering Data Using Where Clause" src="https://github.com/user-attachments/assets/c5589a3a-6b97-4fb9-9835-dd3dabeaf57f" />
+
 * Sorted datasets
+  
+  --Ascending Order
+  
+  <img width="773" height="159" alt="Sort in AscendingOrder" src="https://github.com/user-attachments/assets/7563af4a-5402-44a9-abbe-01a2076d76f6" />
+  
+   --Desending Order
+  
+   <img width="782" height="152" alt="Sort in DesencingOrder" src="https://github.com/user-attachments/assets/98cf2169-79c4-46d9-b875-8bf59e2d80af" />
+
 * Product‑wise sales summary
+  
+  <img width="409" height="243" alt="image" src="https://github.com/user-attachments/assets/66200473-3a82-4a12-a7c1-1996359a9d38" />
+
 * Revenue analysis reports
+
+  <img width="372" height="121" alt="image" src="https://github.com/user-attachments/assets/bb04e4ff-a6ad-4d31-9704-6bfdba3041f8" />
 
 ---
 
@@ -168,12 +186,3 @@ HAVING SUM(quantity * price) > 50000;
 * Better preparation for placement and interview questions
 
 ---
-
-## 🏁 Conclusion
-
-This experiment provides hands‑on experience with essential SQL querying techniques used in real‑world database applications. It strengthens analytical thinking and practical SQL skills.
-
----
-
-✅ **Experiment Successfully Completed**
-
