@@ -118,12 +118,13 @@ SELECT * FROM project;
 
 📤 Output
 
-<img width="537" height="163" alt="Screenshot 2026-01-27 221923" src="https://github.com/user-attachments/assets/88b4fc6f-5e9e-42aa-b5df-8f8a189b9dec" />
+Tables created successfully
 
-<img width="1074" height="193" alt="Screenshot 2026-01-27 221939" src="https://github.com/user-attachments/assets/88e35de3-fa5b-4342-b156-5d1ece0e241c" />
+Data inserted, updated, and deleted correctly
 
-<img width="714" height="131" alt="Screenshot 2026-01-27 221951" src="https://github.com/user-attachments/assets/4d440a64-fd9e-4dc4-8a12-a97ecef326eb" />
+Constraints validated
 
+Role-based access verified
  
 
 📚 Learning Outcomes
